@@ -26,5 +26,5 @@ int (*get_format_function(char c))(va_list args)
 		if (formats[i].format == c)
 			return (formats[i].f);
 	}
-
+	exit(99);
 }
