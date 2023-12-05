@@ -44,6 +44,5 @@ int _printf(const char *format, ...)
 			++printed_size;
 		}
 	}
-	_putchar('\n');
 	return (printed_size);
 }

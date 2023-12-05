@@ -10,7 +10,7 @@ int main(void)
 {
 	int size;
 
-	size = _printf("najib %c %s %k", '&', "abba");
+	size = _printf("najib %c %s %k %x %m %y %p", '&', "abba");
 
 	printf("number of printed text is %d\n", size);
 
