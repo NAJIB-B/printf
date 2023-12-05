@@ -15,6 +15,9 @@ int _printf(const char *format, ...)
 
 	int (*printer)(va_list);
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(args, format);
 
 	string_size = _strlen(format);
