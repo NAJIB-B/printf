@@ -10,8 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int printed_size = 0, string_size = 0, i, spe_mode = 0, j;
-	int format_arr_size = 0;
+	int printed_size = 0, string_size = 0, i, spe_mode = 0, j, fmt_arr_size = 0;
 	char formats_array[] = {'c', 's', 'd'};
 	va_list args;
 
@@ -19,9 +18,8 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(args, format);
-	format_arr_size = sizeof(formats_array) / sizeof(formats_array[0]);
+	fmt_arr_size = sizeof(formats_array) / sizeof(formats_array[0]);
 	string_size = _strlen(format);
 
 	for (i = 0; i < string_size; ++i)
@@ -36,7 +34,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%')
 			{
-				for (j = 0; j < format_arr_size; ++j)
+				for (j = 0; j < fmt_arr_size; ++j)
 				{
 					if (formats_array[j] == format[i + 1])
 					{

@@ -3,7 +3,7 @@
 
 /**
  * print_number - prints a decimal from va_list args
- * @args: arguments to print decimal from
+ * @n: number to be printed
  *
  * Return: number of character printed
  */
