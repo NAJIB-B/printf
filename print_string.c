@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stddef.h>
 #include "main.h"
 
 
@@ -12,14 +13,27 @@ int print_string(va_list args)
 {
 	char *s;
 	int size = 0, i;
+	char *nil = "(nil)";
 
 	s = va_arg(args, char *);
 
-	for (i = 0; s[i] != '\0'; ++i)
+	if (s == NULL)
 	{
-		_putchar(s[i]);
-		++size;
+		for (i = 0; nil[i] != '\0'; ++i)
+		{
+			_putchar(nil[i]);
+			++size;
+		}
 	}
+	else
+	{
+		for (i = 0; s[i] != '\0'; ++i)
+		{
+			_putchar(s[i]);
+			++size;
+		}
+	}
+
 
 	return (size);
 }
