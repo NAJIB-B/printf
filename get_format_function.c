@@ -27,7 +27,4 @@ int (*get_format_function(char c))(va_list args)
 			return (formats[i].f);
 	}
 
-	printf("format not found");
-	exit(99);
-
 }
