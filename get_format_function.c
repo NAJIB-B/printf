@@ -17,7 +17,8 @@ int (*get_format_function(char c))(va_list args)
 	sp_f formats[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'d', print_decimal}
+		{'d', print_decimal},
+		{'i', print_integer}
 	};
 
 	array_length = sizeof(formats) / sizeof(formats[0]);
@@ -27,5 +28,5 @@ int (*get_format_function(char c))(va_list args)
 		if (formats[i].format == c)
 			return (formats[i].f);
 	}
-	exit(99);
+	return (NULL);
 }

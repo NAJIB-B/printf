@@ -20,5 +20,7 @@ int print_char(va_list args);
 int print_string(va_list args);
 int print_decimal(va_list args);
 int (*get_format_function(char c))(va_list args);
+int print_integer(va_list args);
+int print_number(int n);
 
 #endif
