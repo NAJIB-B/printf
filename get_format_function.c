@@ -16,7 +16,8 @@ int (*get_format_function(char c))(va_list args)
 	size_t i, array_length;
 	sp_f formats[] = {
 		{'c', print_char},
-		{'s', print_string}
+		{'s', print_string},
+		{'d', print_decimal}
 	};
 
 	array_length = sizeof(formats) / sizeof(formats[0]);
