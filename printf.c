@@ -34,8 +34,11 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%')
 			{
-				spe_mode = 1;
-				continue;
+				if (format[i + 1] == 'c' || format[i + 1] == 's')
+				{
+					spe_mode = 1;
+					continue;
+				}
 			}
 			_putchar(format[i]);
 			++printed_size;
