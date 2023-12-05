@@ -10,7 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int printed_size = 0, string_size = 0, i, spe_mode = 0, j, fmt_arr_size = 0;
+	int printed_size = 0, string_size = 0, i, spe_mode = 0, fmt_arr_size = 0;
 	char formats_array[] = {'c', 's', 'd', 'i'};
 	va_list args;
 
@@ -34,14 +34,9 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%')
 			{
-				for (j = 0; j < fmt_arr_size; ++j)
-				{
-					if (formats_array[j] == format[i + 1])
-					{
-						spe_mode = 1;
-						break;
-					}
-				}
+				if (format[i + 1] == '\0')
+					continue;
+				spe_mode = fmt_arr_checker(fmt_arr_size, formats_array, format[i + 1]);
 				if (spe_mode == 1)
 					continue;
 			}
@@ -50,4 +45,30 @@ int _printf(const char *format, ...)
 		}
 	}
 	return (printed_size);
+}
+
+
+/**
+ * fmt_arr_checker - checks if a character is in the format array
+ * @size: size of array to check
+ * @array: array to check
+ * @character: character to check for
+ *
+ * Return: 1 if the character is present and 0 otherwise
+ */
+int fmt_arr_checker(int size, char array[], char character)
+{
+	int i, result = 0;
+
+	for (i = 0; i < size; ++i)
+	{
+		if (array[i] == character)
+		{
+			result = 1;
+			break;
+		}
+	}
+
+	return (result);
+
 }
