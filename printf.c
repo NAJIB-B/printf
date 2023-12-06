@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%')
 			{
-				if (format[i + 1] == '\0')
+				if (format[i + 1] == '\0' || format[i + 1] == ' ')
 					continue;
 				spe_mode = fmt_arr_checker(fmt_arr_size, formats_array, format[i + 1]);
 				if (spe_mode == 1)
