@@ -13,7 +13,7 @@ int print_string(va_list args)
 {
 	char *s;
 	int size = 0, i;
-	char *nil = "(nil)";
+	char *nil = "(null)";
 
 	s = va_arg(args, char *);
 

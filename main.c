@@ -10,7 +10,7 @@ int main(void)
 {
 	int size;
 
-	size = _printf("% yes");
+	size = _printf("% yes %s", NULL);
 
 	printf("\nnumber of printed text is %d\n", size);
 
