@@ -18,7 +18,8 @@ int (*get_format_function(char c))(va_list args)
 		{'c', print_char},
 		{'s', print_string},
 		{'d', print_decimal},
-		{'i', print_integer}
+		{'i', print_integer},
+		{'%', print_percent}
 	};
 
 	array_length = sizeof(formats) / sizeof(formats[0]);
