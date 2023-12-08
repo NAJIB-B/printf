@@ -24,5 +24,6 @@ int print_integer(va_list args);
 int print_number(int n);
 int fmt_arr_checker(int fmt_arr_size, char formats_array[], char character);
 int print_percent(va_list args);
+int count_number(int n);
 
 #endif

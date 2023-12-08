@@ -29,9 +29,34 @@ int print_number(int n)
  */
 int print_decimal(va_list args)
 {
-	int d;
+	int d, printed;
 
 	d = va_arg(args, int);
 
-	return (print_number(d));
+	printed = count_number(d);
+
+	if (d < 0)
+	{
+		_putchar('-');
+		++printed;
+	}
+	d = -(d);
+	print_number(d);
+
+	return (printed);
+}
+
+/**
+ * count_number - count number of digits in a number
+ * @n: number to count
+ *
+ * Return: count of digits in a number
+ */
+int count_number(int n)
+{
+	if ((n / 10) != 0)
+	{
+		return (1 + count_number(n / 10));
+	}
+	return (1);
 }

@@ -9,9 +9,19 @@
  */
 int print_integer(va_list args)
 {
-	int d;
+	int d, printed;
 
 	d = va_arg(args, int);
 
-	return (print_number(d));
+	printed = count_number(d);
+
+	if (d < 0)
+	{
+		_putchar('-');
+		++printed;
+	}
+	d = -(d);
+	print_number(d);
+
+	return (printed);
 }

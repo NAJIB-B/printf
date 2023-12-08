@@ -8,8 +8,10 @@
  */
 int main(void)
 {
+	int size;
 
-	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	size = _printf("%d", -1024);
+	printf("\nnumber of printed text is %d\n", size);
 
 	return (0);
 }
