@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_binary - print a decimal number in binary form
@@ -28,7 +27,7 @@ int print_binary(va_list args)
  * convert_dec_to_bin - converts decimal to binary
  * @n: number to convert
  *
- * Return: returns decimal value
+ * Return: returns binary value
  */
 int convert_dec_to_bin(int n)
 {

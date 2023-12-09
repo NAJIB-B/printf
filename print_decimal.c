@@ -1,6 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
-#include <stdio.h>
+
 
 /**
  * print_number - prints a decimal from va_list args
@@ -43,7 +43,7 @@ int print_decimal(va_list args)
 		++printed;
 	}
 	d = -(d);
-	printf("from ints place %d\n", d);
+
 	print_number(d);
 
 	return (printed);

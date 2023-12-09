@@ -20,7 +20,11 @@ int (*get_format_function(char c))(va_list args)
 		{'d', print_decimal},
 		{'i', print_integer},
 		{'%', print_percent},
-		{'b', print_binary}
+		{'b', print_binary},
+		{'o', print_octal},
+		{'u', print_u_int},
+		{'x', print_hex_a},
+		{'X', print_hex_A}
 	};
 
 	array_length = sizeof(formats) / sizeof(formats[0]);

@@ -27,5 +27,10 @@ int print_percent(va_list args);
 int count_number(int n);
 int convert_dec_to_bin(int n);
 int print_binary(va_list args);
+int print_octal(va_list args);
+int convert_dec_to_octal(int n);
+int print_u_int(va_list args);
+int print_hex_a(va_list args);
+int print_hex_A(va_list args);
 
 #endif

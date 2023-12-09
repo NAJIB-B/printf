@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 	int printed_size = 0, string_size = 0, i, spe_mode = 0, fmt_arr_size = 0;
-	char formats_array[] = {'c', 's', 'd', 'i', '%', 'b'};
+	char formats_array[] = {'c', 's', 'd', 'i', '%', 'b', 'u', 'o', 'x', 'X'};
 	va_list args;
 
 	int (*printer)(va_list);
